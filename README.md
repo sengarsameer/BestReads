@@ -18,13 +18,18 @@ Displays the bestsellers list and rank 1's cover pic with their title and author
 - Displays the rank 1's cover pic from the selected genre with their title and author names.
 
 ## Description
+
 Parsing data from both APIs was not easy as sometime no data was available and many times they were not well-structured.
+
 So, Various checks have been implemented to provide error free browsing experience.
+
 Problems such as :-
-No ISBN available (Handled in line no. 174)
-ISBN available but book cover is not available. (Handled in line no. 184)
-Errors in "Total_Number_Of_Books" in provided data. (Handled in line no 164)
-No description found for some books, handled by showing message "No Description Found" (Handled in line no 405)
+
+- No ISBN available (Handled in line no. 174)
+- ISBN available but book cover is not available. (Handled in line no. 184)
+- Errors in "Total_Number_Of_Books" in provided data. (Handled in line no 164)
+- No description found for some books, handled by showing message "No Description Found" (Handled in line no 405)
+
 **you can see formatted json data fetched from above used APIs by uncommenting line no 180 or 181**
 
 
