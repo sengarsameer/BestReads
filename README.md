@@ -29,6 +29,7 @@ Problems such as :-
 - ISBN available but book cover is not available. (Handled in line no. 184)
 - Errors in "Total_Number_Of_Books" in provided data. (Handled in line no 164)
 - No description found for some books, handled by showing message "No Description Found" (Handled in line no 405)
+- No book cover link in provided data. (Handled in line no 183)
 
 **you can see formatted json data fetched from above used APIs by uncommenting line no 180 or 181**
 
