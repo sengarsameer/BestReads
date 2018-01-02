@@ -138,9 +138,10 @@
 
             if  ( (isset ($_POST['category_list']) || isset ($_POST['forward'] ) ) && (strcmp ($_POST['category_list'],"###")!=0) ) {
                 $book_catg_name=$_POST['category_list'] ;
+                $prev_book_catg_name=$_POST['prev_book_catg_name'] ;
                 $prev_page=0;
-
-                if  (isset ($_POST['page_count']) && isset ($_POST['forward']) ) {
+                
+                if  (isset ($_POST['page_count']) && isset ($_POST['forward']) && strcmp($prev_book_catg_name,$book_catg_name)==0 ) {
                     $prev_page=$_POST['page_count'];
                 }
 
@@ -178,8 +179,8 @@
                     $tmp= json_decode (curl_exec ($curl),true);
                     curl_close ($curl);
                     //   echo '<pre>'; print_r($b_result); echo '</pre>';
-                    //   echo '<pre>'; print_r($tmp); echo '</pre>';
-                    if($tmp['totalItems']>0) {
+                    //  echo '<pre>'; print_r($tmp); echo '</pre>';
+                    if(($tmp['totalItems']>0)&&(!empty($tmp['items'][0]['volumeInfo']['imageLinks']))) {
                         $book_cover=$tmp['items'][0]['volumeInfo']['imageLinks']['smallThumbnail'];
                     }
                 }
@@ -272,7 +273,7 @@
                         ?>
 
                     </select>
-
+                    <input type="hidden" name="prev_book_catg_name" value="<?php echo $book_catg_name;?>" />
                     <input type="submit" value="Show Books">
 
                 </div>
@@ -444,4 +445,3 @@
     </body>
 
 </html>
-
