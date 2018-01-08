@@ -9,6 +9,16 @@ Displays the bestsellers list and rank 1's cover pic with their title and author
     Frontend :- HTML and CSS
 
     Backend :- PHP
+    
+    
+## How to implement
+- Clone/Download the repo in your PC.
+- Unzip the folder in htdocs (if using xampp) or www/html/ (i.e. root folder of the web server).
+- Start the server in your PC.
+- Open your web-browser and go to [http://localhost/BestReads/](http://localhost/BestReads/)
+- Select the genre of book and click on the button "Show Books".
+- For more details about functionality please read the following description.
+
 
 ## Features
 - Displays the bestsellers' list (in a table having at-most 10 values) according to book genre.
