@@ -282,6 +282,7 @@
                     <label for="page">Page <?php echo $display_page;?> of <?php echo $total_page;?></label>
                     <input type="hidden" name="page_count" value="<?php echo $display_page;?>" />
                     <input type="submit" name="forward" value="next">
+                    <input type="submit" name="backward" value="back" onclick="history.back();">
                 </div>
 
             </form>
